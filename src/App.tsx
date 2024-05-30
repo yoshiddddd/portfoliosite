@@ -1,12 +1,13 @@
 import React from 'react';
+// import './mypic.JPG';
 import './App.css';
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="profile-picture.jpg" className="App-profile-picture" alt="profile" />
-        <h1 className="App-title">Welcome to My Website</h1>
+        <img src='mypic.JPG' className="App-profile-picture" alt="profile" />
+        <h1 className="App-title">吉田和司</h1>
         <p className="App-introduction">
           Hello! My name is [Your Name]. I am a [Your Profession] with a passion for [Your Interests]. 
           Welcome to my personal website where you can learn more about me and my work.
@@ -34,7 +35,7 @@ const App: React.FC = () => {
         <section className="App-section">
           <h2>Contact</h2>
           <p>
-            You can reach me at <a href="mailto:your.email@example.com">your.email@example.com</a>.
+            You can reach me at <a href="mailto:your.email@example.com">ka.yoshida0424@gmail.com</a>.
           </p>
         </section>
       </main>
