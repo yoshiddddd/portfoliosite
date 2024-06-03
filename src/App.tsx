@@ -9,16 +9,15 @@ const App: React.FC = () => {
         <img src='mypic.JPG' className="App-profile-picture" alt="profile" />
         <h1 className="App-title">吉田和司</h1>
         <p className="App-introduction">
-          Hello! My name is [Your Name]. I am a [Your Profession] with a passion for [Your Interests]. 
-          Welcome to my personal website where you can learn more about me and my work.
+       こんにちは
         </p>
       </header>
       <main className="App-main">
         <section className="App-section">
           <h2>About Me</h2>
           <p>
-            I have been working in [Your Field] for [Number of Years] years. I specialize in [Your Specialization].
-            In my free time, I enjoy [Your Hobbies].
+            成蹊大学理工学部システムデザイン学科3年(現在休学中)
+            
           </p>
         </section>
         <section className="App-section">
