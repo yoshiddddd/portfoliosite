@@ -3,7 +3,7 @@ const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: './index.js',
-  mode: 'development', // or 'production'
+  mode: 'development', 
   module: {
     rules: [
       {
