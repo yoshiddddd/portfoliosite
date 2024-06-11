@@ -1,12 +1,12 @@
 import React from 'react';
-// import './mypic.JPG';
+// import mypic from '../public/mypic.JPG';
 import './App.css';
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src='mypic.JPG' className="App-profile-picture" alt="profile" />
+        {/* <img src={mypic} className="App-profile-picture" alt="profile" /> */}
         <h1 className="App-title">吉田和司</h1>
         <p className="App-introduction">
        こんにちは
@@ -17,7 +17,7 @@ const App: React.FC = () => {
           <h2>About Me</h2>
           <p>
             成蹊大学理工学部システムデザイン学科3年(現在休学中)
-            
+
           </p>
         </section>
         <section className="App-section">

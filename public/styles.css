@@ -1,0 +1,89 @@
+/*!***************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/App.css ***!
+  \***************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);
+/*!*******************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/App.css (1) ***!
+  \*******************************************************************/
+/* Google Fonts */
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #4a90e2;
+  color: white;
+  padding: 40px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.App-profile-picture {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.App-profile-picture:hover {
+  transform: scale(1.1);
+}
+
+.App-title {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  font-weight: 700;
+}
+
+.App-introduction {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.App-main {
+  padding: 40px 20px;
+}
+
+.App-section {
+  background: white;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.App-section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.App-section h2 {
+  font-size: 1.8rem;
+  color: #4a90e2;
+  margin-bottom: 10px;
+}
+
+.App-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.App-footer {
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px 20px;
+}
+
+.App-footer p {
+  margin: 0;
+}
+
