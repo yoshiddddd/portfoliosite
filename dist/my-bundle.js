@@ -9,13 +9,13 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./server/index.js":
-/*!*************************!*\
-  !*** ./server/index.js ***!
-  \*************************/
+/***/ "./index.js":
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const express = __webpack_require__(/*! express */ \"express\");\nconst path = __webpack_require__(/*! path */ \"path\");\nconst React = __webpack_require__(/*! react */ \"react\");\nconst {\n  renderToString\n} = __webpack_require__(/*! react-dom/server */ \"react-dom/server\");\nconst App = (__webpack_require__(/*! ../src/App */ \"./src/App.tsx\")[\"default\"]);\nconst app = express();\napp.use(express.static('../public'));\n// app.use(express.static(path.join(__dirname, '../public')));\nconsole.log('__dirname:', __dirname);\napp.get('*', (req, res) => {\n  if (req.path.includes('/styles.css') || req.path.includes('/bundle.js')) {\n    return res.sendFile(path.join(__dirname, '../public', req.path));\n  }\n  const appString = renderToString(React.createElement(App));\n  const html = `\n    <!DOCTYPE html>\n    <html>\n      <head>\n        <title>SSR with React</title>\n        <link rel=\"icon\" href=\"/favicon.ico\" />\n        <link rel=\"stylesheet\" href=\"/styles.css\" />\n        </head>\n        <body>\n        <div id=\"root\">${appString}</div>\n        <script src=\"/bundle.js\"></script>\n      </body>\n    </html>\n  `;\n  res.send(html);\n});\napp.listen(9000, () => {\n  console.log('Server is running on http://localhost:9000');\n});\n\n//# sourceURL=webpack://my-app/./server/index.js?");
+eval("const express = __webpack_require__(/*! express */ \"express\");\nconst path = __webpack_require__(/*! path */ \"path\");\nconst React = __webpack_require__(/*! react */ \"react\");\nconst {\n  renderToString\n} = __webpack_require__(/*! react-dom/server */ \"react-dom/server\");\nconst App = (__webpack_require__(/*! ./src/App */ \"./src/App.tsx\")[\"default\"]);\nconst app = express();\napp.use(express.static('../public'));\n// app.use(express.static(path.join(__dirname, '../public')));\nconsole.log('Serving static files from:', path.join(__dirname, '../public'));\napp.get('*', (req, res) => {\n  // if (req.path.includes('/styles.css') ) {\n  //     return res.sendFile(path.join(__dirname, '../public', req.path));\n  //   }\n  const appString = renderToString(React.createElement(App));\n  const html = \"\\n  <!DOCTYPE html>\\n    <html>\\n      <head>\\n        <title>SSR with React</title>\\n        <link rel=\\\"icon\\\" href=\\\"/favicon.ico\\\" />\\n        <link rel=\\\"stylesheet\\\" href='/styles.css' />\\n        </head>\\n        <body>\\n        <div id=\\\"root\\\">\".concat(appString, \"</div>\\n        <script src=\\\"/bundle.js\\\"></script>\\n        </body>\\n        </html>\\n        \");\n  res.send(html);\n});\napp.listen(9000, () => {\n  console.log('Server is running on http://localhost:9000');\n});\n\n//# sourceURL=webpack://my-app/./index.js?");
 
 /***/ }),
 
@@ -115,7 +115,7 @@ module.exports = require("path");
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./server/index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./index.js");
 /******/ 	
 /******/ })()
 ;
